@@ -174,14 +174,80 @@ header .menu{
     position: absolute;
     inset: auto 10px 10px 10px;
 }
-@media screen and (max-width: 678px) {
-    .thumbnail{
-        justify-content: start;
+@media screen and (max-width: 1024px) {
+    header {
+        width: 95%;
+        grid-template-columns: auto 1fr auto;
     }
-    .slider .list .item .content h2{
+    .slider .list .item .content h2 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+    header .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #010101;
+        height: 100vh;
+        width: 70%;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: 0.5s;
+    }
+    .slider .list .item .content h2 {
         font-size: 60px;
     }
-    .arrows{
+    .thumbnail {
+        justify-content: start;
+        bottom: 200px;
+    }
+    .thumbnail .item {
+        width: 120px;
+        height: 180px;
+    }
+    .arrows {
         top: 10%;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .logo {
+        font-size: 14px;
+    }
+    .navbar-icons {
+        gap: 15px;
+    }
+    .navbar-icons svg {
+        width: 20px;
+        height: 20px;
+    }
+    .slider .list .item .content {
+        top: 15%;
+    }
+    .slider .list .item .content h2 {
+        font-size: 40px;
+    }
+    .slider .list .item .content p:nth-child(1) {
+        letter-spacing: 5px;
+    }
+    .thumbnail {
+        bottom: 150px;
+        padding: 0 20px;
+    }
+    .thumbnail .item {
+        width: 100px;
+        height: 150px;
+    }
+    .arrows button {
+        width: 30px;
+        height: 30px;
+        font-size: large;
     }
 }
